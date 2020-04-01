@@ -12,6 +12,10 @@ def hello_world():
 def hello_name(name):
     return 'Hello {}!'.format(name)
 
+@app.route('/')
+def home():
+    return 'Welcome home!'
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
